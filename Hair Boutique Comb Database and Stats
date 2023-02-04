@@ -1,0 +1,12 @@
+CREATE TABLE hair_boutique (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, size TEXT, aisle INTEGER, price INTEGER);
+
+INSERT INTO hair_boutique VALUES (1, "Red Combs", 5, "Small", 1, 5);
+INSERT INTO hair_boutique VALUES (2, "Blue Combs", 4, "Small", 1, 5);
+INSERT INTO hair_boutique VALUES (3, "Yellow Combs", 4, "Large", 3, 5);
+INSERT INTO hair_boutique VALUES (4, "Purple Combs", 5, "Large", 3, 5);
+INSERT INTO hair_boutique VALUES (5, "Orange Combs", 2, "Medium", 2, 5);
+
+SELECT * FROM hair_boutique;
+SELECT * FROM hair_boutique WHERE quantity > 4;
+
+SELECT size, SUM(quantity) FROM hair_boutique GROUP BY size
